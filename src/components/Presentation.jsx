@@ -15,11 +15,11 @@ export default function Presentation() {
 
     return (
         <div className="relative h-screen overflow-hidden bg-black bg-opacity-70 bg-blend-multiply bg-cover bg-center bg-no-repeat md:bg-opacity-0"
-            style={{ backgroundImage: "url('/imgs/home-min.webp')" }}>
+            style={{ backgroundImage: "url('/imgs/home-min.webp')", }}>
             {modal === 'about' && <AboutDialog onClose={() => setModal(null)} />}
             <div className="container mx-auto px-4">
                 {/* Navigation */}
-                <nav className="hidden py-2 md:flex justify-between items-center mt-8">
+                <nav className="hidden py-2 md:flex justify-between items-center">
                     <div className="opacity-0">Search</div>
                     <ul className="flex space-x-8 items-center text-white">
                         {navItems.map((item, index) => (
