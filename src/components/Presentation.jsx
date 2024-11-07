@@ -25,7 +25,7 @@ export default function Presentation() {
                         {navItems.map((item, index) => (
                             <li key={index}>
                                 {item.src ? (
-                                    <img src={item.src} alt="Logo" className="w-24 h-12 object-contain" />
+                                    <img src={item.src} alt="Logo" className="w-24 h-12 object-contain" loading="lazy" />
                                 ) : (
                                     <a
                                         href={item.href}
