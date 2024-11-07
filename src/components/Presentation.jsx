@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ShopButton from './ShopButton';
+import CountdownSectionSmall from './CountdownSectionSmall';
 
 export default function Presentation() {
     const [modal, setModal] = useState(null);
@@ -99,21 +101,3 @@ function AboutDialog({ onClose }) {
     );
 }
 
-function CountdownSectionSmall() {
-    return (
-        <div className="bg-gray-800 p-4 rounded-lg">
-            <p className="text-white text-center">Countdown placeholder</p>
-        </div>
-    );
-}
-
-function ShopButton() {
-    return (
-        <a
-            href="#shop"
-            className="bg-orange-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-600 transition-colors inline-block text-center"
-        >
-            Comprar ahora
-        </a>
-    );
-}
