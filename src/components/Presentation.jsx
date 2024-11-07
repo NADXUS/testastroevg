@@ -17,7 +17,7 @@ export default function Presentation() {
             {modal === 'about' && <AboutDialog onClose={() => setModal(null)} />}
             <div className="container mx-auto px-4">
                 {/* Navigation */}
-                <nav className="hidden py-2 md:flex justify-between items-center">
+                <nav className="hidden py-2 md:flex justify-between items-center mt-8">
                     <div className="opacity-0">Search</div>
                     <ul className="flex space-x-8 items-center text-white">
                         {navItems.map((item, index) => (
@@ -41,10 +41,10 @@ export default function Presentation() {
                 </nav>
 
                 {/* Hero Content */}
-                <main className="py-4 md:py-8 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 relative z-10">
-                    <div className="w-full md:w-3/5 space-y-3">
+                <main className="py-4 md:py-8 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 relative z-10 mt-20 md:space-y-10">
+                    <div className="w-full md:w-3/5 space-y-3 flex gap-3 flex-col">
                         <div className="text-orange-500 font-bold tracking-wider">UNLOCK THE GAME</div>
-                        <h1 className="text-white text-2xl md:text-4xl font-bold leading-tight">
+                        <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight">
                             ELEVATE YOUR GAME ELITE{' '}
                             <span className="text-orange-500">BASKETBALL TRAINING</span>
                         </h1>
@@ -63,14 +63,14 @@ export default function Presentation() {
                                 <span>Instagram / evgtraining</span>
                             </a>
                         </div>
-                        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                        <div className="flex flex-col gap-4 sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                             <ShopButton />
                             <a
                                 href="#VideoContainer"
                                 className="flex items-center space-x-2 text-white hover:text-orange-500 transition-colors"
                             >
                                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center border-2 border-orange-700">
-                                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-orange-700 border-b-8 border-b-transparent ml-1"></div>
+                                    <img src="/imgs/icons/arrow-min.svg" className='w-3 h-3' />
                                 </div>
                                 <span>Mira el vídeo de introducción</span>
                             </a>
@@ -111,7 +111,7 @@ function ShopButton() {
     return (
         <a
             href="#shop"
-            className="bg-orange-500 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-600 transition-colors inline-block text-center"
+            className="bg-orange-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-600 transition-colors inline-block text-center"
         >
             Comprar ahora
         </a>
