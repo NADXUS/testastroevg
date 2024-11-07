@@ -6,14 +6,14 @@ export default function Presentation() {
     const navItems = [
         { text: 'Acerca de', action: () => setModal('about') },
         { text: 'Entrenadores', href: '#CoachesSection' },
-        { text: 'Logo', src: '/imgs/Logo.svg' },
+        { text: 'Logo', src: '/imgs/Logo-min.svg' },
         { text: 'Contacto', href: '#GallerySection' },
         { text: 'Únete ahora', href: 'https://www.quickticket.com.co/unlock-the-game', target: '_blank' },
     ];
 
     return (
         <div className="relative h-screen overflow-hidden bg-black bg-opacity-70 bg-blend-multiply bg-cover bg-center bg-no-repeat md:bg-opacity-0"
-            style={{ backgroundImage: "url('/imgs/home.webp')" }}>
+            style={{ backgroundImage: "url('/imgs/home-min.webp')" }}>
             {modal === 'about' && <AboutDialog onClose={() => setModal(null)} />}
             <div className="container mx-auto px-4">
                 {/* Navigation */}
@@ -59,7 +59,7 @@ export default function Presentation() {
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-orange-500 transition-colors flex items-center space-x-1"
                             >
-                                <img src="/imgs/socialIcons/icons (3).svg" alt="Instagram" className="w-6 h-6" />
+                                <img src="/imgs/socialIcons/icons (3)-min.svg" alt="Instagram" className="w-6 h-6" />
                                 <span>Instagram / evgtraining</span>
                             </a>
                         </div>
