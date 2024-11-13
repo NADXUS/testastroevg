@@ -45,16 +45,16 @@ export default function ShopHome() {
     return (
         <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <div className="flex gap-8 mb-12">
-                    <h2 className="text-4xl w-full md:text-5xl font-bold text-green-950" style={{ lineHeight: "1.2" }}>
+                <div className="flex md:flex-row flex-col gap-8 mb-12">
+                    <h2 className="md:text-left text-center text-4xl w-full md:text-5xl font-bold text-green-950" style={{ lineHeight: "1.2" }}>
                         Escoge el{" "}
                         <span className="text-green-700">Paquete Adecuado</span>
                         <br />
-                        Para tu Objetivo
+                        <span className="md:visible hidden">Para tu Objetivo</span>
                     </h2>
                     <div className="lg:text-left flex-0.2">
-                        <h3 className="text-xl font-semibold text-green-950 mb-2">¿Qué es un Vite?</h3>
-                        <p className="text-gray-600">
+                        <h3 className="md:text-left text-center text-xl font-semibold text-green-950 mb-2">¿Qué es un Vite?</h3>
+                        <p className="text-gray-600 md:text-left text-center ">
                             Un Vite equivale a la cosecha de 1 árbol de aguacate Hass durante{" "}
                             <span className="font-semibold">20 años</span>.
                         </p>

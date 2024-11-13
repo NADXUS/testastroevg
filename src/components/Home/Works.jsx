@@ -58,10 +58,13 @@ export default function Works() {
       <div className="relative container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <p className="text-yellow-300 font-medium">Cómo Funciona</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-3xl md:text-5xl md:block hidden font-bold text-white">
             Comience su Viaje de
             <br />
             Inversor
+          </h2>
+          <h2 className="text-4xl block md:hidden font-bold text-white">
+            Comience su Viaje de Inversor
           </h2>
         </div>
 
