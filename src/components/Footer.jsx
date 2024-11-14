@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonDefault } from '../Buttons'
+import { ButtonDefault } from './Buttons'
 
 export default function Footer() {
   return (
