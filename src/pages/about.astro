@@ -1,12 +1,12 @@
 ---
 import NavBar from "../components/Navbar";
 import Layout from "../layouts/Layout.astro";
-import AboutUs from "./reactPages/About";
+import AboutUs from "./../ReactPages/About";
 ---
 
 <Layout title="Avovite | Nosotros">
   <main class="min-h-screen">
     <NavBar client:load />
-    <AboutUs client:load />
+    <AboutUs />
   </main>
 </Layout>

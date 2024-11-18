@@ -1,5 +1,5 @@
-import { ButtonShop } from "../Buttons"
-import { CardShop } from "../Cards"
+import { ButtonShop } from "./Buttons"
+import { CardShop } from "./Cards"
 
 
 

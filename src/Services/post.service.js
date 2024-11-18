@@ -1,0 +1,73 @@
+import axios from "axios";
+import { handleCall } from "../utilities";
+
+export default class PostService {
+  constructor(token) {
+    this.token = token;
+    this.API_URL = `${import.meta.env.PUBLIC_API_URL}`;
+  }
+
+  async get({ id = null } = {}) {
+    return await handleCall(async () => {
+      const headers = this.token ? { Authorization: this.token } : {};
+      if (id) {
+        return (await axios.get(`${this.API_URL}/blog/${id}`, { headers })).data;
+      } else {
+        return (await axios.get(`${this.API_URL}/blog`, { headers })).data;
+      }
+    });
+  }
+
+  async add({ id, url_image, ...body }) {
+    const formData = new FormData();
+
+    // Agregar campos al FormData
+    Object.entries(body).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    // Agregar el archivo al FormData
+    formData.append("url_image", url_image);
+
+    // Enviar la solicitud al backend
+    return await handleCall(
+      async () =>
+        (
+          await axios.post(`${this.API_URL}/blog`, formData, {
+            headers: {
+              Authorization: this.token,
+              "Content-Type": "multipart/form-data", // Especificar el tipo de contenido como FormData
+            },
+          })
+        ).data
+    );
+  }
+
+  async update({ id, ...body }) {
+    const formData = new FormData();
+
+    // Agregar campos al FormData
+    Object.entries(body).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    // Enviar la solicitud al backend
+    return await handleCall(
+      async () =>
+        (
+          await axios.put(`${this.API_URL}/blog/${id}`, formData, {
+            headers: {
+              Authorization: this.token,
+              "Content-Type": "multipart/form-data", // Especificar el tipo de contenido como FormData
+            },
+          })
+        ).data
+    );
+  }
+
+  async delete({ id }) {
+    return await handleCall(
+      async () => (await axios.delete(`${this.API_URL}/blog/${id}`, { headers: { Authorization: this.token } })).data
+    );
+  }
+}

@@ -1,0 +1,12 @@
+---
+import NavBar from "../components/Navbar";
+import Layout from "../layouts/Layout.astro";
+import { Testimonials as TestimonialsComponent } from "./../ReactPages/Testimonials";
+---
+
+<Layout title="Avovite | Testimonios">
+  <main class="min-h-screen">
+    <NavBar client:load />
+    <TestimonialsComponent client:visible />
+  </main></Layout
+>

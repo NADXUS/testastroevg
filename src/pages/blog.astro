@@ -1,12 +1,12 @@
 ---
 import NavBar from "../components/Navbar";
 import Layout from "../layouts/Layout.astro";
-import Formulario from "./../ReactPages/Formulario";
+import { Blog as BlogComponent } from "./../ReactPages/Blog";
 ---
 
-<Layout title="Avovite | Nosotros">
+<Layout title="Avovite | Blog">
   <main class="min-h-screen">
     <NavBar client:load />
-    <Formulario client:load />
-  </main>
-</Layout>
+    <BlogComponent />
+  </main></Layout
+>

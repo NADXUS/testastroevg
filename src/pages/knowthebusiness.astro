@@ -1,12 +1,12 @@
 ---
 import NavBar from "../components/Navbar";
 import Layout from "../layouts/Layout.astro";
-import Formulario from "./../ReactPages/Formulario";
+import { KnowTheBusiness as Business } from "./../ReactPages/KnowTheBusiness";
 ---
 
-<Layout title="Avovite | Nosotros">
+<Layout title="Avovite | Conoce el negocio">
   <main class="min-h-screen">
     <NavBar client:load />
-    <Formulario client:load />
+    <Business client:load />
   </main>
 </Layout>
