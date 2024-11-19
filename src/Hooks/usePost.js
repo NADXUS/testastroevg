@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import useSession from "./useSession";
-import PostService from "../Services/post.service";
+import PostService from "./../Services/post.service";
 
 function usePost() {
   const [session] = useSession();

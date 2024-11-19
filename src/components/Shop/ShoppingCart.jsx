@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FloatingButton from "./FloatingButton";
 import CartDrawer from "./CartDrawer";
-import useCart from "../../Hooks/useCart";
+import useCart from "./../../Hooks/useCart";
 
 const ShoppingCart = () => {
   const [open, setOpen] = useState(false);

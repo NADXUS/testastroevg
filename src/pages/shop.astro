@@ -1,12 +1,12 @@
 ---
-import NavBar from "../components/Navbar";
-import Layout from "../layouts/Layout.astro";
-import Shop from "./../ReactPages/Shop";
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import { Shop as ShopComponent } from "./../ReactPages/Shop";
 ---
 
-<Layout title="Avovite | Nosotros">
+<Layout title="Avovite | Compra ahora">
   <main class="min-h-screen">
-    <NavBar client:load />
-    <Shop client:load />
+    <NavBar client:load activeRoute="/shop" />
+    <ShopComponent client:load />
   </main>
 </Layout>

@@ -1,0 +1,12 @@
+---
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import { BlogSection as BlogSectionComponent } from "./../ReactPages/blogSection";
+---
+
+<Layout title="Avovite | Nosotros">
+    <main class="min-h-screen">
+        <NavBar client:load activeRoute="/blogSection" />
+        <BlogSectionComponent client:load />
+    </main>
+</Layout>

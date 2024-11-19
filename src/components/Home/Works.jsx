@@ -1,13 +1,4 @@
-import { ButtonDefault } from "../Buttons"
-
-const Button = ({ children, className, ...props }) => (
-  <button
-    className={`inline-flex items-center gap-2 bg-yellow-300 hover:bg-yellow-400 text-green-950 font-semibold rounded-full px-6 py-3 ${className}`}
-    {...props}
-  >
-    {children}
-  </button>
-)
+import { ButtonDefault } from "./../Buttons"
 
 const StepCard = ({ number, title, description, imageSrc }) => (
   <div className="bg-white rounded-2xl p-5 shadow-lg">
@@ -33,21 +24,27 @@ export default function Works() {
       number: 1,
       title: "Elige tu Paquete",
       description: "Selecciona la cantidad de plantas de aguacate que deseas poseer",
-      imageSrc: "/Home/works1.webp"
+      step: "Paso 1",
+      image: "/Home/image.webp",
+      alt: "Selección de paquete de inversión en aguacate",
     },
     {
       number: 2,
       title: "Sigue tu Progreso",
       description: "Recibe actualizaciones sobre tus plantas y cosechas en tiempo real a través de nuestro panel de control",
-      imageSrc: "/Home/works1.webp"
+      step: "Paso 2",
+      image: "/Home/image-1.webp",
+      alt: "Panel de seguimiento de inversión",
     },
     {
       number: 3,
       title: "Cosecha y Gana",
       description: "Recibe pagos regulares basados en los rendimientos de la cosecha y los precios del mercado",
-      imageSrc: "/Home/works1.webp"
-    }
-  ]
+      step: "Paso 3",
+      image: "/Home/image-2.webp",
+      alt: "Ganancias de cosecha de aguacate",
+    },
+  ];
 
   return (
     <div className="relative py-20">
@@ -57,7 +54,7 @@ export default function Works() {
 
       <div className="relative container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <p className="text-yellow-300 font-medium">Cómo Funciona</p>
+          <p className="text-[#f9e988] font-medium">Cómo Funciona</p>
           <h2 className="text-3xl md:text-5xl md:block hidden font-bold text-white">
             Comience su Viaje de
             <br />
@@ -75,13 +72,13 @@ export default function Works() {
               number={step.number}
               title={step.title}
               description={step.description}
-              imageSrc={step.imageSrc}
+              imageSrc={step.image}
             />
           ))}
         </div>
 
         <div className="text-center">
-          <a href="/comprar">
+          <a href="/shop">
             <ButtonDefault>
               Quiero comprar
               {/*  <ArrowRight className="w-5 h-5" /> */}

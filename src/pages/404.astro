@@ -1,0 +1,12 @@
+---
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import NotFound from "./../ReactPages/NotFound";
+---
+
+<Layout title="Avovite | Blog">
+  <main class="min-h-screen">
+    <NavBar client:load />
+    <NotFound client:load />
+  </main></Layout
+>

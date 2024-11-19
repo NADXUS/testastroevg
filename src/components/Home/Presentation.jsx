@@ -1,5 +1,5 @@
-import { ButtonDefault } from "../Buttons"
-import NavBar from "../Navbar"
+import { ButtonDefault } from "./../Buttons"
+import NavBar from "./../Navbar"
 
 const Presentation = () => {
     return (
@@ -25,22 +25,26 @@ const Presentation = () => {
                             Los frutos del aguacate HASS Colombiano son para todos "Cultivamos y vendemos por ti"
                         </h1>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <ButtonDefault className="px-4 md:px-8 py-2 text-lg">
-                                Empezar
-                            </ButtonDefault>
-                            <ButtonDefault className="px-4 md:px-8 py-2 text-lg">
-                                Explorar
-                            </ButtonDefault>
+                            <a href="/shop">
+                                <ButtonDefault className="px-4 md:px-8 py-2 text-lg">
+                                    Empezar
+                                </ButtonDefault>
+                            </a>
+                            <a href="/knowthebusiness">
+                                <ButtonDefault className="px-4 md:px-8 py-2 text-lg">
+                                    Explorar
+                                </ButtonDefault>
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end">
                         <div className="mt-12 flex flex-col sm:flex-row gap-6 sm:gap-12 bg-[#22482280] p-6 backdrop-blur-sm rounded-[30px] w-full sm:w-auto">
                             <div className="text-left space-y-3">
-                                <p className="text-center md:text-left text-4xl sm:text-5xl text-yellow-300">99%</p>
+                                <p className="text-center md:text-left text-4xl sm:text-5xl text-[#f9e988]">99%</p>
                                 <p className="text-center md:text-left text-white text-xl">Clientes satisfechos</p>
                             </div>
                             <div className="text-left space-y-3">
-                                <p className="text-center md:text-left text-4xl sm:text-5xl text-yellow-300">10+</p>
+                                <p className="text-center md:text-left text-4xl sm:text-5xl text-[#f9e988]">10+</p>
                                 <p className="text-center md:text-left text-white text-xl">Años de experiencia</p>
                             </div>
                         </div>

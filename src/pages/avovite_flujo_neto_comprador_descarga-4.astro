@@ -1,0 +1,35 @@
+---
+export const prerender = false;
+---
+
+<html lang="en">
+  <head>
+    <title>Descargando archivo...</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.location.pathname === '/avovite_flujo_neto_comprador_descarga-4') {
+          fetch('https://conexiones-star.concilbot.com/fileblocks/avovite/9ced7417-4056-49eb-b099-150dcb8d650d.xlsx')
+            .then(response => response.blob())
+            .then(blob => {
+              const downloadLink = document.createElement('a');
+              const url = URL.createObjectURL(blob);
+              downloadLink.href = url;
+              downloadLink.download = 'simulador_avovite.xlsx';
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+
+              setTimeout(() => {
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(url);
+                window.history.back(); // Regresa al usuario a la página anterior
+              }, 100);
+            })
+            .catch(error => console.error('Error al descargar el archivo:', error));
+        }
+      });
+    </script>
+  </body>
+</html>

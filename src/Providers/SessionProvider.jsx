@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { CONTRACT_TYPES } from "../utilities/constants";
+import { CONTRACT_TYPES } from "./../utilities/constants";
 
 export const sessionKey = "VE9LX0FWT19FTg";
 

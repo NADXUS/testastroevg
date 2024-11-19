@@ -1,12 +1,12 @@
 ---
-import NavBar from "../components/Navbar";
-import Layout from "../layouts/Layout.astro";
-import Formulario from "./../ReactPages/Formulario";
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import { Formulario as FormularioComponent } from "./../ReactPages/Formulario";
 ---
 
-<Layout title="Avovite | Nosotros">
+<Layout title="Avovite | Formulario">
   <main class="min-h-screen">
-    <NavBar client:load />
-    <Formulario client:load />
+    <NavBar client:load activeRoute="/formulario" />
+    <FormularioComponent client:load />
   </main>
 </Layout>

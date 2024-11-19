@@ -1,30 +1,48 @@
 const CultivatingStories = () => {
     const blogs = [
         {
-            date: "21 Ago 2024",
+            id: 1,
             title: "Testimonio - Natalia Patiño",
-            duration: "8 min",
-            videoUrl: "https://www.youtube.com/embed/example1",
+            durantion: "8 min",
+            date: "21 Ago 2024",
+            video: "https://youtu.be/73kspdrXuPc",
         },
         {
+            id: 2,
+            title: "🥑Invertí en una finca de AGUACATES con 2 Millones de pesos (mira las GANANCIAS💰)",
+            durantion: "8 min",
             date: "21 Ago 2024",
-            title: "Invertí en una finca de AGUACATES con 2 Millones de pesos (mira las GANANCIAS💰)",
-            duration: "8 min",
-            videoUrl: "https://www.youtube.com/embed/example2",
+            video: "https://youtu.be/REoDkdBwSVA",
         },
         {
+            id: 3,
+            title: "💰MIS AHORROS los estoy invirtiendo en un CULTIVO DE AGUACATES 🥑 Un negocio....",
+            durantion: "8 min",
             date: "21 Ago 2024",
-            title: "Testimonio - Natalia Patiño",
-            duration: "8 min",
-            videoUrl: "https://www.youtube.com/embed/example1",
+            video: "https://youtu.be/7dN1wB0zNIs",
         },
         {
+            id: 4,
+            title: "Testimonio - Liliana Sanchez",
+            durantion: "8 min",
             date: "21 Ago 2024",
-            title: "Invertí en una finca de AGUACATES con 2 Millones de pesos (mira las GANANCIAS💰)",
-            duration: "8 min",
-            videoUrl: "https://www.youtube.com/embed/example2",
+            video: "https://youtu.be/dgZx2r2wDqU",
         },
     ];
+
+    function convertToEmbedUrl(url) {
+        let videoId;
+
+        if (url.includes("youtube.com/watch?v=")) {
+            videoId = url.split("v=")[1]?.split("&")[0];
+        } else if (url.includes("youtu.be/")) {
+            videoId = url.split("youtu.be/")[1];
+        } else if (url.includes("youtube.com/shorts/")) {
+            videoId = url.split("shorts/")[1]?.split("?")[0];
+        }
+
+        return `https://www.youtube.com/embed/${videoId}`;
+    }
 
     return (
         <section className="bg-white py-10 max-w-7xl mx-auto">
@@ -40,7 +58,7 @@ const CultivatingStories = () => {
                         <div key={index} className="bg-white shadow-md rounded-xl overflow-hidden">
                             <div className="relative">
                                 <iframe
-                                    src={blog.videoUrl}
+                                    src={convertToEmbedUrl(blog.video)}
                                     title={blog.title}
                                     className="w-full aspect-video"
                                     frameBorder="0"
@@ -51,7 +69,7 @@ const CultivatingStories = () => {
                             <div className="p-6">
                                 <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
                                     <span>{blog.date}</span>
-                                    <span className="ml-auto">{blog.duration}</span>
+                                    <span className="ml-auto">{blog.durantion}</span>
                                 </div>
                                 <h3 className="font-bold text-lg text-gray-800">{blog.title}</h3>
                             </div>

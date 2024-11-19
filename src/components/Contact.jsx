@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="bg-[#0d524c] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-left mb-16">
-          <p className="text-[#cde77c] mb-2">Contáctanos</p>
+          <p className="text-[#f9e988] mb-2">Contáctanos</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Ponte en Contacto</h2>
         </div>
 
@@ -33,7 +33,7 @@ export default function Contact() {
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">Contáctanos</h3>
             <p className="text-gray-400 mb-4">Lun-Vie de 9 a.m. a 7 p.m.</p>
-            <button className="bg-transparent border-2 border-yellow-300 text-yellow-300 px-6 py-2 rounded-full hover:bg-yellow-300 hover:text-green-900 transition-colors">
+            <button onClick={() => window.open('https://wa.me/573148058249', '_blank')} className="bg-transparent border-2 border-[#f9e988] text-[#f9e988] px-6 py-2 rounded-full hover:bg-[#f9e988] hover:text-green-900 transition-colors">
               Escribenos por WhatsApp
             </button>
           </div>
@@ -56,6 +56,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

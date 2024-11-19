@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonDefault } from "../Buttons";
+import { ButtonDefault, ButtonShop } from "./../Buttons";
 
 const InfoHome = () => {
   return (
@@ -59,7 +59,7 @@ const InfoHome = () => {
           </div>
           <div className="w-full lg:w-1/2 flex flex-col items-center">
             <div className="w-full flex items-end justify-end mt-10">
-              <ButtonDefault className="w-full lg:w-auto">Quiero comprar →</ButtonDefault>
+              <ButtonShop className="w-full lg:w-auto">Quiero comprar →</ButtonShop>
             </div>
             <div className="h-full flex items-center mt-40">
               <iframe

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { handleCall } from "../utilities";
+import { handleCall } from "./../utilities";
 
 export default class PostService {
   constructor(token) {

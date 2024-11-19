@@ -27,16 +27,16 @@ export const CartProvider = ({ children }) => {
       const newState = prev.map((el) =>
         el.id === id
           ? {
-              ...el,
-              quantity:
-                value === "increase"
-                  ? el.quantity + 1
-                  : value === "decrease"
+            ...el,
+            quantity:
+              value === "increase"
+                ? el.quantity + 1
+                : value === "decrease"
                   ? el.quantity - 1 <= 0
                     ? el.quantity
                     : el.quantity - 1
                   : value,
-            }
+          }
           : el
       );
       localStorage.setItem("shopping_cart", JSON.stringify(newState));

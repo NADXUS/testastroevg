@@ -1,12 +1,12 @@
 ---
-import NavBar from "../components/Navbar";
-import Layout from "../layouts/Layout.astro";
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
 import { Blog as BlogComponent } from "./../ReactPages/Blog";
 ---
 
 <Layout title="Avovite | Blog">
   <main class="min-h-screen">
-    <NavBar client:load />
-    <BlogComponent />
+    <NavBar client:load activeRoute="/blog" />
+    <BlogComponent client:load />
   </main></Layout
 >

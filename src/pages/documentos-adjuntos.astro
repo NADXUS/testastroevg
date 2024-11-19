@@ -1,0 +1,12 @@
+---
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import LandingLegal from "./../ReactPages/LandingLegal";
+---
+
+<Layout title="Avovite | Nosotros">
+  <main class="min-h-screen">
+    <NavBar client:load activeRoute="/documentos-adjuntos" />
+    <LandingLegal client:load />
+  </main>
+</Layout>

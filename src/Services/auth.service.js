@@ -1,5 +1,5 @@
 import axios from "axios";
-import { handleCall } from "../utilities";
+import { handleCall } from "./../utilities";
 
 export default class AuthService {
   constructor(token = null) {
@@ -26,7 +26,7 @@ export default class AuthService {
 
       return { status: true, data: data.data };
     } catch (error) {
-      let errors  = {
+      let errors = {
         "user-unassigned-credentials": "Credenciales sin asignar, por favor contacte el administrador.",
         "user-incorrect-credentials": "Credenciales incorrectas.",
         "user-unvalidate-email": "Por favor valide su email primero"
@@ -50,7 +50,7 @@ export default class AuthService {
       return { status: false, data: response.data };
     }
   }
-  
+
   async signupWithGoogle({ token } = {}) {
     try {
       const { data } = await axios.post(`${this.API_URL}/users/signup-google`, {

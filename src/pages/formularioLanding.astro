@@ -1,0 +1,12 @@
+---
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import { Formulario as FormularioLandingComponent } from "./../ReactPages/FormularioLanding";
+---
+
+<Layout title="Avovite | Nosotros">
+  <main class="min-h-screen">
+    <NavBar client:load activeRoute="/formularioLanding" />
+    <FormularioLandingComponent client:load />
+  </main>
+</Layout>

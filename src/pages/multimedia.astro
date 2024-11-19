@@ -1,0 +1,12 @@
+---
+import NavBar from "./../components/Navbar";
+import Layout from "./../layouts/Layout.astro";
+import { Formulario as MultimediaComponent } from "./../ReactPages/Multimedia";
+---
+
+<Layout title="Avovite | Nosotros">
+  <main class="min-h-screen">
+    <NavBar client:load activeRoute="/multimedia" />
+    <MultimediaComponent client:load />
+  </main>
+</Layout>

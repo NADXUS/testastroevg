@@ -1,6 +1,6 @@
-import { ConfigProvider } from "../Providers/ConfigProvider";
-import { SessionProvider } from "../Providers/SessionProvider";
-import { CartProvider } from "../Providers/CartProvider";
+import { ConfigProvider } from "./../Providers/ConfigProvider";
+import { SessionProvider } from "./../Providers/SessionProvider";
+import { CartProvider } from "./../Providers/CartProvider";
 import { SnackbarProvider } from "notistack";
 
 function MasterProvider({ children }) {
