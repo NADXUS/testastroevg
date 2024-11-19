@@ -3,7 +3,7 @@ import ShoppingCart from '../components/Shop/ShoppingCart';
 import ShopSection from '../components/Shop/ShopSection';
 import { CartProvider } from '../Providers/CartProvider';
 import { SessionProvider } from '../Providers/SessionProvider';
-import { ConfigProvider } from '../../../frontend/src/Providers/ConfigProvider';
+import { ConfigProvider } from '../Providers/ConfigProvider';
 
 const Shop = () => {
   return (

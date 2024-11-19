@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import useCart from '../../Hooks/useCart';
 import { IMAGE_PLACEHOLDER } from '../../utilities/constants';
 
